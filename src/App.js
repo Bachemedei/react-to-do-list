@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ToDoItem from "./components/ToDoItem";
+import ToDoForm from "./components/ToDoForm";
 
 function App() {
   // Variables
@@ -9,6 +10,12 @@ function App() {
     "Sleep.",
   ]);
 
+  // Methods
+  const addToDo = (text) => {
+    const newToDos = [...todos, text];
+    setToDos(newToDos);
+  }
+
   // Template
   return (
     <div>
@@ -16,6 +23,7 @@ function App() {
       {todos.map((todo, index) => (
         <ToDoItem todo={todo} key={index} />
       ))}
+      <ToDoForm addToDo={addToDo} />
     </div>
   );
 }
