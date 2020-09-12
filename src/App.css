@@ -1,0 +1,11 @@
+.app {
+    background: #ffdb58;
+    padding: 50px;
+    height: 100vh;
+  }
+  .to-do-list {
+    background: #e8e8e8;
+    padding: 5px;
+    max-width: 400px;
+  }
+
